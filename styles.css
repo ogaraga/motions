@@ -101,6 +101,14 @@ body {
   transform-style: preserve-3d;
   transform: perspective(1200px) rotateY(0deg);
 }
+@media screen and (min-width: 450px) {
+  .images {
+    min-width: 50px;
+    min-height: 50px;
+    margin: auto 10px;
+    transform: perspective(500px) rotateY(0deg);
+  }
+}
 .images span {
   position: absolute;
   top: 0;
@@ -108,10 +116,26 @@ body {
   width: 80%;
   transform: rotateY(calc(var(--i) * 60deg)) translateZ(300px);
 }
+@media screen and (min-width: 450px) {
+  .images span {
+    min-width: 50px;
+    min-height: 50px;
+    margin: auto 10px;
+    transform: rotateY(calc(var(--i) * 60deg)) translateZ(200px);
+  }
+}
+
 .images span img {
   width: 150px;
   height: 150px;
   position: absolute;
   left: 0;
   top: 0;
+}
+@media screen and (min-width: 450px) {
+  .images span img {
+    min-width: 50px;
+    min-height: 50px;
+    margin: auto 10px;
+  }
 }
